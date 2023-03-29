@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nba_info/views/dashboard_view.dart';
 import 'dart:async';
-
-import 'views/intro_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,7 +15,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'B2B',
       theme: ThemeData(
-          primarySwatch: Colors.indigo,
+          primarySwatch: Colors.orange,
           fontFamily: 'Roboto',
           useMaterial3: true),
       home: const SplashScreenView(),
@@ -36,12 +35,13 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 1),
+      const Duration(milliseconds: 4625),
       () {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const IntroView(),
+              // builder: (context) => const IntroView(),
+              builder: (context) => const DashboardView(),
             ));
       },
     );
@@ -51,7 +51,8 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   Widget build(BuildContext context) {
     return const SizedBox(
         child: Image(
-      image: AssetImage('assets/images/splash_screen.png'),
+      fit: BoxFit.fill,
+      image: AssetImage('assets/images/splash_screen.webp'),
     ));
   }
 }
