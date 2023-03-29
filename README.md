@@ -2,8 +2,8 @@
 
 A new Flutter project.
 
-
 # Plugins and Stack Version Useds
+
 - Android SDK version 33.0.0
 - IOS SDK version 15
 - Flutter 3.9.0-1.0.pre.33
@@ -11,7 +11,12 @@ A new Flutter project.
 - DevTools 2.22.2
 
 # Plugins Setup
+
+1. Sdk Version
+
+   Add to **android/app/build.gradle**
+
    ```
-    compileSdkVersion 33
-    minSdkVersion 20
+       compileSdkVersion 33
+       minSdkVersion 20
    ```
